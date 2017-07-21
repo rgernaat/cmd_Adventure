@@ -1,31 +1,13 @@
 
 // End goal
 const aragorn = new Hero({ name: "Aragorn", hp: 100, damage : 15, armor : 5, alliance : "light" });
-const orc = new Orc({ name: "Thrall", hp: 30, damage : 10, armor : 10, alliance : "Dark"  });
-const saruman = new Wizard({ name: "Saruman", hp: 50, damage : 25, armor : 5, alliance : "Dark" });
+const orc = new Hero({ name: "Thrall", hp: 30, damage : 10, armor : 10, alliance : "Dark"  });
+const saruman = new Hero({ name: "Saruman", hp: 50, damage : 25, armor : 5, alliance : "Dark" });
 
 function Hero(actor) {
     console.log (actor.name + ' has entered the screen healthy with ' + actor.hp + ' hit points');
     this.name   = actor.name; 
     this.hp     = actor.hp;
-    this.damage = actor.damage;
-    this.armor  = actor.armor;
-    this.alliance = actor.alliance;
-}
-
-function Orc(actor) {
-    console.log(actor.name + ' has entered the screen healthy with ' + actor.hp + ' hit points');
-    this.name = actor.name; 
-    this.hp   = actor.hp;
-    this.damage = actor.damage;
-    this.armor  = actor.armor;
-    this.alliance = actor.alliance;
-}
-
-function Wizard(actor) {
-    console.log(actor.name + ' has entered the screen healthy with ' + actor.hp + ' hit points');
-    this.name = actor.name; 
-    this.hp   = actor.hp;
     this.damage = actor.damage;
     this.armor  = actor.armor;
     this.alliance = actor.alliance;
