@@ -1,6 +1,6 @@
     // End goal
-    const aragorn = new Hero({ name: "Aragorn", hp: 100, damage : 15, armor : 10, alliance : "light" });
-    const orc = new Hero({ name: "Thrall", hp: 40, damage : 10, armor : 10, alliance : "Dark"  });
+    const aragorn = new Hero({ name: "Aragorn", hp: 100, damage : 15, armor : 15, alliance : "light" });
+    const orc = new Hero({ name: "Thrall", hp: 40, damage : 17, armor : 10, alliance : "Dark"  });
     const saruman = new Hero({ name: "Saruman", hp: 70, damage : 35, armor : 5, alliance : "Dark" });
 
     function Hero(actor) {
@@ -19,6 +19,7 @@
         }
         
         if (defender.hp <= 0){
+            defender.hp = 0;
             console.log(defender.name + ' has obtained fatal damage, only the gods may save him.');
         }else{
             console.log('ouch! ' + defender.name + ' has lost ' + (attacker.damage-defender.armor) + ' hit points, he now has ' + defender.hp + ' remaining');
